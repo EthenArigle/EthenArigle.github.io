@@ -22,16 +22,18 @@ title: Home
       <div class="avatar-placeholder" aria-hidden="true">{{ site.data.profile.initials }}</div>
     {% endif %}
     <p class="identity-name">{{ site.data.profile.name }}</p>
-    <p>{{ site.data.profile.department }}</p>
-    <p>{{ site.data.profile.institution }}</p>
-    <p class="location">{{ site.data.profile.location }}</p>
+    <div class="identity-details">
+      <p><span class="profile-icon" aria-hidden="true">⚗</span><span>{{ site.data.profile.department }}</span></p>
+      <p><span class="profile-icon" aria-hidden="true">▦</span><span>{{ site.data.profile.institution }}</span></p>
+      <p><span class="profile-icon" aria-hidden="true">⌖</span><span>{{ site.data.profile.location }}</span></p>
+    </div>
   </div>
 </section>
 
 <section class="section" aria-labelledby="interests-title">
-  <div class="section-heading">
-    <p class="eyebrow">Focus</p>
-    <h2 id="interests-title">Research interests</h2>
+  <div class="section-heading research-heading">
+    <div><p class="eyebrow">Focus</p><h2 id="interests-title">Research interests</h2></div>
+    <img class="research-cat" src="{{ '/assets/images/research-cat.png' | relative_url }}" alt="" aria-hidden="true">
   </div>
   <div class="interest-grid">
     {% for interest in site.data.profile.interests %}
@@ -68,7 +70,7 @@ title: Home
 <section class="contact-strip" aria-labelledby="contact-title">
   <div><p class="eyebrow">Connect</p><h2 id="contact-title">Let’s exchange ideas.</h2></div>
   <div class="contact-links">
-    {% if site.data.profile.email != "" %}<a href="mailto:{{ site.data.profile.email }}">Email</a>{% endif %}
+    {% if site.data.profile.email != "" %}<a class="email-link" href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>{% endif %}
     {% if site.data.profile.links.github != "" %}<a href="{{ site.data.profile.links.github }}" rel="me">GitHub</a>{% endif %}
     {% if site.data.profile.links.scholar != "" %}<a href="{{ site.data.profile.links.scholar }}" rel="me">Google Scholar</a>{% endif %}
     {% if site.data.profile.links.orcid != "" %}<a href="{{ site.data.profile.links.orcid }}" rel="me">ORCID</a>{% endif %}

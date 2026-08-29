@@ -12,12 +12,8 @@ bio: >-
   Science and Artificial Intelligence at Shandong University of Finance and
   Economics, where he is a member of the IDA Laboratory. He received his
   bachelor's degree in Software Engineering from Xi'an University of Posts and
-  Telecommunications in 2024. His research focuses on computer vision and
-  multimodal learning for low-altitude intelligence, with particular interests
-  in image processing and compression, robust learning with missing modalities,
-  and small object detection in aerial imagery. He aims to develop efficient
-  visual perception systems that retain task-relevant information under
-  constrained sensing, bandwidth, and computational conditions.
+  Telecommunications in 2024. His research interests include computer vision,
+  multimodal learning, and small object detection for low-altitude intelligence.
 interests:
   - name: "Computer Vision"
     description: "Task-aware image processing and compression that preserve useful visual features for downstream perception."
