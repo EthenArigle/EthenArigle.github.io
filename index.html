@@ -23,9 +23,9 @@ title: Home
     {% endif %}
     <p class="identity-name">{{ site.data.profile.name }}</p>
     <div class="identity-details">
-      <p><span class="profile-icon" aria-hidden="true">⚗</span><span>{{ site.data.profile.department }}</span></p>
-      <p><span class="profile-icon" aria-hidden="true">▦</span><span>{{ site.data.profile.institution }}</span></p>
-      <p><span class="profile-icon" aria-hidden="true">⌖</span><span>{{ site.data.profile.location }}</span></p>
+      <p><span class="profile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 12v5c2.8 2 7.2 2 10 0v-5M21 9v6"/></svg></span><span>{{ site.data.profile.department }}</span></p>
+      <p><span class="profile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9m4 11V9m4 11V9m4 11V9M3 9h18L12 4 3 9Z"/></svg></span><span>{{ site.data.profile.institution }}</span></p>
+      <p><span class="profile-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>{{ site.data.profile.location }}</span></p>
     </div>
   </div>
 </section>
@@ -67,10 +67,27 @@ title: Home
   {% endif %}
 </section>
 
+{% assign gallery_images = site.static_files | where_exp: "file", "file.path contains '/assets/images/gallery/'" | sort: "path" %}
+{% if gallery_images.size > 0 %}
+<section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
+  <div class="section-heading">
+    <p class="eyebrow">Beyond research</p>
+    <h2 id="gallery-title">Photo wall</h2>
+  </div>
+  <div class="photo-wall">
+    {% for image in gallery_images %}
+      <figure class="photo-tile">
+        <img src="{{ image.path | relative_url }}" alt="Photo wall image {{ forloop.index }}" loading="lazy" decoding="async">
+      </figure>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <section class="contact-strip" aria-labelledby="contact-title">
-  <div><p class="eyebrow">Connect</p><h2 id="contact-title">Let’s exchange ideas.</h2></div>
+  <div><h2 id="contact-title">Let’s exchange ideas.</h2></div>
   <div class="contact-links">
-    {% if site.data.profile.email != "" %}<a class="email-link" href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>{% endif %}
+    {% if site.data.profile.email != "" %}<button class="email-copy" type="button" data-email="{{ site.data.profile.email }}" aria-describedby="email-copy-status">Email</button><span class="sr-only" id="email-copy-status" aria-live="polite"></span>{% endif %}
     {% if site.data.profile.links.github != "" %}<a href="{{ site.data.profile.links.github }}" rel="me">GitHub</a>{% endif %}
     {% if site.data.profile.links.scholar != "" %}<a href="{{ site.data.profile.links.scholar }}" rel="me">Google Scholar</a>{% endif %}
     {% if site.data.profile.links.orcid != "" %}<a href="{{ site.data.profile.links.orcid }}" rel="me">ORCID</a>{% endif %}

@@ -3,7 +3,7 @@ name: "Ethen Arigle"
 native_name: "Dongsheng Wang · 王东升"
 initials: "WDS"
 role: "Master's Student in Computer Science"
-department: "IDA Laboratory · School of Computer Science and Artificial Intelligence"
+department: "School of Computer Science and Artificial Intelligence"
 institution: "Shandong University of Finance and Economics"
 location: "Shandong, China"
 email: "wds2416441085@gmail.com"
@@ -27,7 +27,7 @@ links:
   orcid: "https://orcid.org/0009-0002-3954-9095"
   linkedin: ""
 cv: ""
-avatar: ""
+avatar: "/assets/images/avatar.jpeg"
 
 education:
   - period: "2025–Present"

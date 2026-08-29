@@ -15,12 +15,15 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="nav shell" aria-label="Primary navigation">
-        <a class="brand" href="{{ '/' | relative_url }}" aria-label="Home"><span>&lt;</span>{{ site.data.profile.initials }}<span>/&gt;</span></a>
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.data.profile.name }} — Home">
+          <img src="{{ '/assets/images/wds-logo.png' | relative_url }}" alt="WDS">
+        </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
         <div class="nav-links" id="nav-links">
           <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
           <a href="{{ '/publications/' | relative_url }}"{% if page.url contains '/publications' %} aria-current="page"{% endif %}>Publications</a>
           <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog' %} aria-current="page"{% endif %}>Blog</a>
+          <a href="{{ '/#gallery' | relative_url }}">Gallery</a>
           <a href="{{ '/cv/' | relative_url }}"{% if page.url contains '/cv' %} aria-current="page"{% endif %}>CV</a>
           <button class="theme-toggle" type="button" aria-label="Switch color theme"><span aria-hidden="true">◐</span></button>
         </div>
