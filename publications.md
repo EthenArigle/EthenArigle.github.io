@@ -8,10 +8,8 @@ permalink: /publications/
 <header class="page-header">
   <p class="eyebrow">Research output</p>
   <h1>Publications</h1>
-  <p>Peer-reviewed papers, preprints, and other research artifacts. The entries below are clearly marked samples and should be replaced with real work.</p>
+  <p>Peer-reviewed papers, workshop publications, preprints, and other research outputs.</p>
 </header>
-
-<aside class="template-notice" aria-label="Template instructions"><strong>Template content.</strong> Edit <code>_data/publications.yml</code> to manage this list without changing the page layout.</aside>
 
 {% assign sorted_publications = site.data.publications | sort: "year" | reverse %}
 {% assign current_year = "" %}

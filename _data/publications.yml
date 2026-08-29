@@ -1,40 +1,13 @@
-# Sample records only. Replace or remove them before treating this as a live CV.
-- title: "A Representative Paper Title Goes Here"
-  authors: "[Your Name], Coauthor One, Coauthor Two"
-  venue: "Conference or Journal Name"
+# Publication metadata verified against the public ORCID and DBLP records.
+- title: "Resolution-Aware Multimodal System Design via Multi-Level Neural Architecture Search for Real-Time RGB-D Semantic Segmentation"
+  authors: "Wenna Wang, Dongsheng Wang, Chuanjin Xu, Yenan Jiang"
+  venue: "Proceedings of the 36th Workshop on Network and Operating System Support for Digital Audio and Video (NOSSDAV 2026), pp. 155–160"
   year: 2026
-  type: "Conference"
-  status: "Sample"
+  type: "Workshop Paper"
+  status: "Published"
   selected: true
-  abstract: "A short, plain-language summary of the problem, method, and principal result."
-  doi: ""
+  abstract: ""
+  doi: "https://doi.org/10.1145/3798065.3798088"
   pdf: ""
   code: ""
   project: ""
-
-- title: "Another Example of an Academic Publication"
-  authors: "Coauthor One, [Your Name], Coauthor Two"
-  venue: "Proceedings of a Research Conference"
-  year: 2025
-  type: "Conference"
-  status: "Sample"
-  selected: false
-  abstract: "Use this optional field to give visitors context before they open the paper."
-  doi: ""
-  pdf: ""
-  code: ""
-  project: ""
-
-- title: "A Preprint Demonstrating the Publication Template"
-  authors: "[Your Name]"
-  venue: "Preprint"
-  year: 2025
-  type: "Preprint"
-  status: "Sample"
-  selected: false
-  abstract: "Preprints, journal articles, workshop papers, and theses can share this structure."
-  doi: ""
-  pdf: ""
-  code: ""
-  project: ""
-

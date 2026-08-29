@@ -4,8 +4,8 @@ This repository publishes an English academic homepage at `https://ethenarigle.g
 
 ## Replace the template content
 
-1. Edit `_data/profile.yml` for your name, biography, research interests, links, portrait, and CV.
-2. Edit `_data/publications.yml` to replace the clearly marked sample publications.
+1. Edit `_data/profile.yml` for your biography, research interests, links, portrait, education, and CV.
+2. Edit `_data/publications.yml` to add publications.
 3. Add posts to `_posts` using `YYYY-MM-DD-title.md` filenames.
 4. Replace or remove the sample post.
 5. Replace `assets/images/og.png` after changing the public name or site branding.

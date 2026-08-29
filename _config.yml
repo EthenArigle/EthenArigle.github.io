@@ -1,10 +1,10 @@
 title: "Ethen — Academic Homepage"
-description: "Academic homepage and research notes in computer science."
+description: "Ethen Arigle's academic homepage: computer vision, multimodal learning, and low-altitude intelligent perception."
 url: "https://ethenarigle.github.io"
 baseurl: ""
 image: "/assets/images/og.png"
 author:
-  name: "[Your Name]"
+  name: "Ethen Arigle"
   url: "https://ethenarigle.github.io"
 twitter:
   card: summary_large_image

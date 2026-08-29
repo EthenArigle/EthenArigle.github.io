@@ -7,6 +7,7 @@ title: Home
   <div class="hero-copy">
     <p class="eyebrow">Hello, I am</p>
     <h1 id="intro-title">{{ site.data.profile.name }}</h1>
+    <p class="native-name">{{ site.data.profile.native_name }}</p>
     <p class="hero-role">{{ site.data.profile.role }}</p>
     <p class="hero-summary">{{ site.data.profile.bio }}</p>
     <div class="hero-actions">
@@ -14,7 +15,7 @@ title: Home
       <a class="button secondary" href="{{ '/cv/' | relative_url }}">View CV</a>
     </div>
   </div>
-  <div class="identity-card" role="group" aria-label="Profile placeholder">
+  <div class="identity-card" role="group" aria-label="Academic profile">
     {% if site.data.profile.avatar != "" %}
       <img class="avatar" src="{{ site.data.profile.avatar | relative_url }}" alt="Portrait of {{ site.data.profile.name }}">
     {% else %}

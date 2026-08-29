@@ -59,6 +59,7 @@ h1 { margin-bottom: 12px; font-size: clamp(3.2rem, 8vw, 6.6rem); }
 h2 { margin-bottom: 0; font-size: clamp(2rem, 4vw, 3rem); }
 h3 { font-size: 1.18rem; }
 .hero-role { margin: 0 0 24px; color: var(--accent); font: 650 clamp(1.15rem, 2vw, 1.45rem) var(--mono); }
+.native-name { margin: -4px 0 12px; color: var(--muted); font: 600 .88rem var(--mono); letter-spacing: .04em; }
 .hero-summary { max-width: 720px; margin: 0; color: var(--muted); font-size: 1.08rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border: 1px solid var(--accent); border-radius: 8px; text-decoration: none; font-weight: 700; }
@@ -125,6 +126,8 @@ h3 { font-size: 1.18rem; }
 .cv-item time { color: var(--muted); font: .76rem var(--mono); }
 .cv-item h3 { margin-bottom: 7px; }
 .cv-item p { margin: 3px 0; color: var(--muted); }
+.cv-item + .cv-item { margin-top: 30px; }
+.cv-item a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .article { padding-bottom: 110px; }
 .article-header { max-width: 860px; padding: 100px 0 56px; }
 .back-link { display: inline-block; margin-bottom: 50px; color: var(--muted); text-decoration: none; font: .8rem var(--mono); }
