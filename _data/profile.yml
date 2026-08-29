@@ -1,0 +1,27 @@
+# Replace the bracketed placeholder values with your own information.
+name: "[Your Name]"
+initials: "YN"
+role: "Researcher in Computer Science"
+department: "[Department / Lab]"
+institution: "[University / Institution]"
+location: "[City, Country]"
+email: ""
+bio: >-
+  I study reliable, intelligent, and human-centered computing systems.
+  Replace this text with an 80–150 word biography describing your current
+  role, the research questions you pursue, and the impact you hope to make.
+interests:
+  - name: "Artificial Intelligence"
+    description: "Learning systems that are capable, transparent, and robust."
+  - name: "Systems Research"
+    description: "Efficient infrastructure for dependable computing at scale."
+  - name: "Human–Computer Interaction"
+    description: "Technology designed around real people and their goals."
+links:
+  github: "https://github.com/EthenArigle"
+  scholar: ""
+  orcid: ""
+  linkedin: ""
+cv: ""
+avatar: ""
+

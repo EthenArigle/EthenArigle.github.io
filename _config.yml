@@ -1,0 +1,28 @@
+title: "Ethen — Academic Homepage"
+description: "Academic homepage and research notes in computer science."
+url: "https://ethenarigle.github.io"
+baseurl: ""
+image: "/assets/images/og.png"
+author:
+  name: "[Your Name]"
+  url: "https://ethenarigle.github.io"
+twitter:
+  card: summary_large_image
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/images/og.png"
+lang: en
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

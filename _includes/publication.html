@@ -1,0 +1,15 @@
+{% assign publication = include.publication %}
+<article class="publication-card">
+  <div class="publication-meta"><span class="tag">{{ publication.type }}</span><time>{{ publication.year }}</time></div>
+  <h3>{{ publication.title }}</h3>
+  <p>{{ publication.authors }}</p>
+  <p class="venue">{{ publication.venue }}</p>
+  {% if publication.abstract != "" %}<p class="publication-abstract">{{ publication.abstract }}</p>{% endif %}
+  <div class="publication-links">
+    {% if publication.pdf != "" %}<a href="{{ publication.pdf }}">PDF</a>{% endif %}
+    {% if publication.doi != "" %}<a href="{{ publication.doi }}">DOI</a>{% endif %}
+    {% if publication.code != "" %}<a href="{{ publication.code }}">Code</a>{% endif %}
+    {% if publication.project != "" %}<a href="{{ publication.project }}">Project</a>{% endif %}
+    {% if publication.status == "Sample" %}<span class="sample-label">Sample entry</span>{% endif %}
+  </div>
+</article>
