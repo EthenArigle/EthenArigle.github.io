@@ -170,6 +170,8 @@ h3 { font-size: 1.18rem; }
 .prose h4 { margin: 1.6em 0 .6em; font-size: 1.12rem; }
 .prose p, .prose ul, .prose blockquote { margin: 1.2em 0; }
 .prose blockquote { padding: 18px 22px; border-left: 3px solid var(--accent); color: var(--muted); background: var(--accent-soft); }
+.prose img { display: block; max-width: 100%; height: auto; margin: 1.7em auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); box-shadow: 0 10px 30px rgba(31,55,90,.08); }
+.prose mjx-container[display="true"] { max-width: 100%; margin: 1.5em 0 !important; padding: .4em 0; overflow-x: auto; overflow-y: hidden; }
 .prose code { padding: .12em .35em; border-radius: 4px; background: var(--accent-soft); font-family: var(--mono); }
 .prose div.highlighter-rouge { max-width: 100%; margin: 1.5em 0; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: #101827; box-shadow: 0 10px 28px rgba(15,23,42,.1); }
 .prose div.highlighter-rouge .highlight { margin: 0; background: transparent; }
