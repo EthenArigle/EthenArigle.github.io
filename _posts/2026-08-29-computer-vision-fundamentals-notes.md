@@ -11,6 +11,7 @@ tags: [computer-vision, pytorch, numpy, deep-learning]
 # 一次运行多少算力如何计算？4GB显存什么意思？
 
 在原生*python*中，float默认是FP64即双精度浮点数，此时计算机存储的有效位数是64，即$2^{64}$ 
+
 ```python
 def input_memory_mib(batch: int, channels: int, height: int, width: int, bytes_per_value: int=4) -> float:
 	# 一个批次张量本身占用的空间大小
@@ -45,6 +46,7 @@ required_keys = {"image_id", "image_size", "boxes", "source"}
 **from pathlib import Path**
 
 *Path* 负责拼接路径，检查存在性和遍历文件，避免手工处理斜杠
+
 ```python
 # 一般地，可以指定course的源文件根目录，如果不指定就是默认执行路径下的../data
 DATA_ROOT = Path(os.getenv("COURSE_DATA_ROOT", "../data"))
@@ -110,6 +112,7 @@ print("first three boxes:\n", boxes[:3])
 # HWC数组转换为BCHW Tensor
 
 **IMPORT**:  torch
+
 ```python
 image_tensor = torch.from_numpy(image)
 # 归一化numpy是HWC(0, 1, 2) 转换为（2， 0， 1）CHW
@@ -124,6 +127,7 @@ print("range:", float(image_shape.min()), float(image_shape.max()))
 
 首先，一般地，我们为了增强数据集会专门使用transforms来对数据集的图片进行各种增强。
 以下为transform.py的模板
+
 ```python
 from __future__ import annotations
 
@@ -441,6 +445,7 @@ def build_detection_transform(
 - `Optional`可选类型，表示这个参数可以是某种特定的类型，也可以是None。比如：`Optional[x]`实际上等价于`x`或`None`。
 - `Callable`可调用对象，表示这是一个可以被调用的对象（通常指函数或实现了`__call__`方法的类）。比如：`Callable[[参数类型1, 参数类型2]，返回值类型]`。如果不严格限制参数和返回值，直接写`Callable`即可。在深度学习通，数据预处理流水线（如`torchvision.transforms`）本质上就是一堆函数。用`Callable`标记它，IDE就知道这个东西可以加括号运行。
 - `Any`任意类型，高速检查器这个是任意类型，别管它~，当处理极其复杂的多模态数据输入，或者读取一个包含各种杂乱数据类型的JSON字段时，就可以这样标记。
+
 ```python
 import json
 import os
@@ -611,6 +616,7 @@ optimizer.step() # 更新参数
 ```
 
 ### 一个epoch训练代码示例
+
 ```python
 def train_one_epoch(model, loader, criterion, optimizer, device):
     model.train()
@@ -674,12 +680,14 @@ def validate(model, loader, criterion, device):
 gray = image.astype(np.float32).mean(axis=2)  # [384,640] 沿着第三个axis（轴）计算
 ```
 `reshape`改变形状，不改变axis的语义，不能使用reshape(3, 384, 640)完成HWC到CHW的转换，它会把空间像素和通道混在一起，正确写法是：
+
 ```python
 chw = np.transpose(image, (2, 0, 1))
 ```
 ## 广播规则
 
 NumPy从最右侧轴开始比较shape；维度相等或其中一个为1时才可广播。因此`[N,4]+[4]`和`[H,W,3]-[3]`合法。
+
 ```python
 image_f = image.astype(np.float32) / 255.0
 mean = np.array([0.485, 0.456, 0.406], dtype=np.float32)
@@ -688,6 +696,7 @@ normalized = (image_f - mean) / std
 ```
 ## uint8、RGB/BGR和共享内存
 `uint8`只能表示0-255，进行减去均值、加噪声和滤波前应转为`float32`
+
 ```python
 work = image.astype(np.float32) + noise
 output = np.clip(work, 0, 255).astype(np.uint8)
